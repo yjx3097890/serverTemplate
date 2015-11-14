@@ -1,0 +1,21 @@
+
+
+var crypto = require('crypto');
+var utils = module.exports;
+var config = require('../config');
+
+utils.getProjectRoot = function(){
+    var path = require('path');
+    return path.join(__dirname,'../');
+};
+
+
+utils.encryptStr = function (str) {
+    if (!str) {
+        return '';
+    }
+    var hmac = crypto.createHmac('sha1', config.pwdKey);
+    hmac.update(str);
+    return hmac.digest('hex');
+};
+
