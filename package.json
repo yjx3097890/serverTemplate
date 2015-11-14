@@ -1,8 +1,7 @@
 {
   "name": "birthday",
-  "version": "1.0.0",
-  "description": "0.0.1",
-  "description": "聊天工具",
+  "version": "0.0.1",
+  "description": "学习学习",
   "private": true,
   "scripts": {
     "start": "pm2 app.json",
